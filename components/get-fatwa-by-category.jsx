@@ -5,7 +5,7 @@ import FatwaTitle from "./fatwa-title";
 const GetFatwaByCategory = async ({ categoryName }) => {
   const allFatwa = await getAllFatwa();
 
-  const fatwasByCategory = allFatwa.filter(
+  const fatwasByCategory = allFatwa?.filter(
     (byCategory) => byCategory.categoryEn === categoryName
   );
 

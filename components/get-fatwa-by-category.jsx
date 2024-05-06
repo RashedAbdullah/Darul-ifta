@@ -1,4 +1,4 @@
-import { getAllFatwa, getUser } from "@/actions/actions";
+import { getAllFatwa } from "@/actions/actions";
 import FatwaCard from "./fatwa-card";
 import FatwaTitle from "./fatwa-title";
 

@@ -1,10 +1,10 @@
 "use server";
 
 import connectMongo from "@/connect-mongo/connector";
-import { UserModel } from "@/models/user-model";
+import { FatwaModel, UserModel } from "@/models/user-model";
 import { redirect } from "next/navigation";
 
-const handleCreateUser = async (formData) => {
+const createUser = async (formData) => {
   try {
     const name = formData.get("name");
     const email = formData.get("email");
@@ -32,4 +32,26 @@ const handleCreateUser = async (formData) => {
   }
 };
 
-export { handleCreateUser };
+const getUser = async () => {
+  try {
+    await connectMongo();
+    // get user:
+    const users = await UserModel.find();
+    return users;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const getAllFatwa = async () => {
+  try {
+    await connectMongo();
+    // get user:
+    const fatwas = await FatwaModel.find();
+    return fatwas;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { createUser, getUser, getAllFatwa };

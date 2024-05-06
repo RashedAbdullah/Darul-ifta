@@ -1,12 +1,12 @@
 import CategoriesOptions from "@/components/categories-options";
 import Header from "@/components/header";
-import SearchFatwa from "@/components/search-fatwa";
+import GetFatwaByCategory from "@/components/get-fatwa-by-category";
 export default function Home() {
   return (
     <main className="relative">
       <Header />
       <CategoriesOptions />
-      <SearchFatwa />
+      <GetFatwaByCategory />
     </main>
   );
 }

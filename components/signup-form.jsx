@@ -1,9 +1,9 @@
-import { handleCreateUser } from "@/actions/actions";
+import { createUser } from "@/actions/actions";
 
 const SignUpForm = () => {
   return (
     <form
-      action={handleCreateUser}
+      action={createUser}
       className="bg-gray-300 lg:p-10 lg:m-10 p-4 m-4 shadow-xl max-w-[40vw rounded-lg"
     >
       <h2 className="text-center m-5 text-xl">সাইনআপ করুন</h2>

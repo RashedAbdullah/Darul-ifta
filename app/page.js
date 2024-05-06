@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     router.push("/category");
-  }, []);
+  }, [router]);
   return (
     <main>
       Go to Category page{" "}

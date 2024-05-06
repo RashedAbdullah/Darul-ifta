@@ -12,11 +12,13 @@ const GetFatwaByCategory = async ({ categoryName }) => {
   return (
     <div className="lg:px-20 px-10 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 my-5 gap-10">
       <div className="col-span-4">
-        {fatwasByCategory.length > 0 && (
+        {fatwasByCategory.length > 0 ? (
           <FatwaTitle
             categoryBn={fatwasByCategory[0].categoryBn}
             categoryName={categoryName}
           />
+        ) : (
+          <FatwaTitle categoryName={categoryName} />
         )}
         <div className="lg:col-span-4 md:col-span-3 col-span-1 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 relative">
           {categoryName ? (

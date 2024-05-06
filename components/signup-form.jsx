@@ -4,10 +4,10 @@ const SignUpForm = () => {
   return (
     <form
       action={createUser}
-      className="bg-gray-300 lg:p-10 lg:m-10 p-4 m-4 shadow-xl max-w-[40vw rounded-lg"
+      className="bg-gray-200 lg:p-10 lg:m-10 p-4 m-4 shadow-xl max-w-[40vw rounded-lg"
     >
       <h2 className="text-center m-5 text-xl">সাইনআপ করুন</h2>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-5">
         {/* নাম */}
         <div className="grid grid-cols-10">
           <p className="col-span-2 text-end px-3">নাম:</p>

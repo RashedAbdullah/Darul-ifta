@@ -1,12 +1,18 @@
-import CategoriesOptions from "@/components/categories-options";
-import Header from "@/components/header";
-import GetFatwaByCategory from "@/components/get-fatwa-by-category";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/category");
+  }, []);
   return (
-    <main className="relative">
-      <Header />
-      <CategoriesOptions />
-      <GetFatwaByCategory />
+    <main>
+      Go to Category page{" "}
+      <button onClick={() => router.push("/category")}>Category</button>
     </main>
   );
 }

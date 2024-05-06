@@ -54,4 +54,14 @@ const getAllFatwa = async () => {
   }
 };
 
-export { createUser, getUser, getAllFatwa };
+const getFatwaById = async (fatwaId) => {
+  try {
+    await connectMongo();
+    const fatwa = await FatwaModel.findById(fatwaId);
+    return fatwa;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { createUser, getUser, getAllFatwa, getFatwaById };

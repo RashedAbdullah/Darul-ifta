@@ -2,7 +2,6 @@
 
 import connectMongo from "@/connect-mongo/connector";
 import { FatwaModel, UserModel } from "@/models/user-model";
-import { redirect } from "next/navigation";
 
 const createUser = async (formData) => {
   try {
@@ -25,8 +24,6 @@ const createUser = async (formData) => {
     // Insert into datasabse:
     await new UserModel(userData).save();
 
-    //   Redirection to home:
-    redirect("/");
   } catch (err) {
     console.log(err.message);
   }
